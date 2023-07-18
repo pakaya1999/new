@@ -1,0 +1,82 @@
+*********BMI CALCULATOR*********
+
+cal_bmi :-
+    write("enter your weight with kg :"),
+    read(Weight),
+    write("enter tour Height with Meters :"),
+    read(Height),
+    Bmi is Weight/(Height*Height),
+    format("Bmi is ~w",[Bmi]).
+
+***** ADD TWO NUMBRS *******
+add :-
+    write("enter a nuber to add"),
+    read(N1),
+    write("enter other number to add"),
+    read(N2),
+    Sum is N1+N2,
+    format("Summation of enterd two number is ~w",[Sum]).
+
+
+**********dennsity of country********\
+population(china,1000).
+population(india,85).
+population(usa,65).
+population(uk,80).
+area(china,10).
+area(india,4).
+area(usa,6).
+area(uk,12).
+
+density :-
+    population(X,Y),
+    area(X,Z),
+    Den is Y/Z,
+    format("~w has ~w population and ~w area: density is ~w",[X,Y,Z,Den]).
+
+
+**********AVERAGE OF STUDENT PASS OR FAIL********
+
+cp(AVG):- AVG>=50,write("student is pass the Exam.").
+cp(AVG):- AVG<50,write("student is fail the Exam.").
+
+grade:-
+    write("Enter the 1st mark: "),
+    read(M1),
+    write("Enter the 2nd mark: "),
+    read(M2),
+    write("Enter the 3rd mark: "),
+    read(M3),
+    SUM is M1+M2+M3,
+    AVG is SUM/3,
+    cp(AVG).
+
+*************calculator*********
+Operation(A,B,'+',Result) :- Result is A+B.
+operation(A,B,'-',Result) :- Result is A-B.
+operation(A,B,'*',Result) :- Result is A*B.
+operation(A,B,"/",Result) :- Result is A/B.
+
+result :-
+    write("enter 1st value:"),
+    read(A),
+    write("enter 2nd value:"),
+    read(B),
+    write("selct the operator"),
+    read(Ope),
+    operation(A,B,Ope,Result),
+    format("output is ~w",[Result]).
+
+**********greater than**********
+
+gt(X,Y) :- X > Y,format("~w grater than ~w",[X,Y]).
+gt(X,Y) :- X < Y,format("~w grater than ~w",[Y,X]).
+gt(X,Y) :- X =:= Y,format("~w equl to ~w",[X,Y]).
+
+value :-write("enter 1st value"),
+        read(X),
+        write("enter 2nd value"),
+        read(Y),
+        gt(X,Y).
+
+
